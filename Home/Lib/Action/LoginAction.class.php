@@ -7,6 +7,7 @@
  */
 class LoginAction extends Action
 {
+
     public function index()
     {
         $this->display();
@@ -28,7 +29,8 @@ class LoginAction extends Action
         $count=$m->where($where)->count();
         if($count>0)//表示存在
         {
-            $this->redirect('User/index');
+            $_SESSION['username']=$username;//thinkphp 已经自动开启了session
+            $this->redirect('Index/shouye');
         }else{
             $this->error('该用户不存在或者密码错误');
         }

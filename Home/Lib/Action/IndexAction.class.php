@@ -88,6 +88,43 @@ class IndexAction extends Action {
         $this->display();
 
     }
+     /*
+      * 模板的使用技巧
+      */
+    public  function model()
+    {
+
+        $this->display();
+    }
+    public  function next()
+    {
+        $this->display();
+    }
+
+    /*
+     * 控制器的模块和操作
+     */
+    function _before_shouye() //前置方法,这种对于登录并不是最优的
+    {
+        //做判断，如果用户没有登录，跳转到登录页面
+        if(!isset($_SESSION['username'])|| $_SESSION['username']=='') //用户没有登录
+        {
+            $this->redirect('Login/index');
+        }
+    }
+
+    public function shouye()
+    {
+        $m=M('city');
+       $arr= $m->select();
+        $this->assign('list',$arr);
+        $this->display();
+    }
+
+    public function _after_shouye()//后置方法
+    {
+        echo "<script>alert('欢迎访问！')</script>";
+    }
 
 
 }

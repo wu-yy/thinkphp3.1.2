@@ -22,11 +22,11 @@
     成年<?php endif; ?>
 
 <table border="1" width="500">
-    <?php $__FOR_START_12242__=10;$__FOR_END_12242__=00;for($j=$__FOR_START_12242__;$j > $__FOR_END_12242__;$j+=-2){ ?><tr><td><?php echo ($j); ?>hh</td></tr><?php } ?>
+    <?php $__FOR_START_16798__=10;$__FOR_END_16798__=00;for($j=$__FOR_START_16798__;$j > $__FOR_END_16798__;$j+=-2){ ?><tr><td><?php echo ($j); ?>hh</td></tr><?php } ?>
 
 </table>
 
-<?php $__FOR_START_2211__=0;$__FOR_END_2211__=3;for($j=$__FOR_START_2211__;$j < $__FOR_END_2211__;$j+=1){ echo ($a[$j]); ?><br><?php } ?>
+<?php $__FOR_START_17535__=0;$__FOR_END_17535__=3;for($j=$__FOR_START_17535__;$j < $__FOR_END_17535__;$j+=1){ echo ($a[$j]); ?><br><?php } ?>
 
 <?php if(is_array($a)): foreach($a as $k=>$v): echo ($k); ?>---<?php echo ($v); ?><br><?php endforeach; endif; ?>
 

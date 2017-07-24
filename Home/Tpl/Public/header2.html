@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        #daohang{
+            height:50px;
+            background:#00AAFF ;
+        }
+        a{
+            border: 1px  solid gray;
+            background: #9B410E;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="daohang">
+    <foreach name="list" item="v">
+        <a href="__APP__/City/<{$v.name}>"><{$v.name}></a>
+    </foreach>
+
+</div>

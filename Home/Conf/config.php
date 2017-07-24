@@ -3,7 +3,7 @@ return array(
 	//'配置项'=>'配置值'
     //在这里对Home 应用进行配置
     //'URL_PATHINFO_DEPR'=>'-'   //修改分隔符
-
+    'URL_CASE_INSENSITIVE'=>true,  //URL 不区分大小写
     //修改左右定界符
     'TMPL_L_DELIM'=>'<{',
     'TMPL_R_DELIM'=>'}>',
@@ -16,7 +16,7 @@ return array(
     'DB_PWD'=>'wuyy1314',  //设置密码
     'DB_PORT'=>'3306',   //设置端口号
     'DB_PREFIX'=>'test_' ,//建立表的时候在给表前缀
-
+    //'DB_DSN'=>'mysql://root:@localhost:3306/thu_activity';
     //开启调试功能的page_trace 功能 一种非常好的调试方式
     //1. 在主入口文件中开启debug模式
     'SHOW_PAGE_TRACE'=>true,
@@ -28,6 +28,14 @@ return array(
     //'THEME_LIST'=>'your,my',//支持的模板列表
     'TMPL_PARSE_STRING'=>array('__CSS__'=>__ROOT__.'/Public/Css',
         '__JS__'=>__ROOT__.'/Public/Js'),//添加自己定制的全局变量模板
+
+    'URL_ROUTER_ON'=>true,//开启路由支持
+    'URL_ROUTE_RULES'=>array(
+        'my'=>'Index/index',//静态路由
+        ':id/:num'=>'Index/index' ,//动态路由，其中id、num表示传进的参数，可以通过$_GET['id']获得
+        'my/:num'=>'Index/index',
+
+    ),//配置路由规则
 
 
 );
