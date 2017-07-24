@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify</title>
+    <script>
+        window.onload=function () {
+            if(<{$data.vip}>==0)
+            {
+                document.getElementsByName('vip')[0].checked='checked';
+            }else
+            {
+                document.getElementsByName('vip')[1].checked='checked';
+            }
+        }
+
+    </script>
+</head>
+<form action="__URL__/update" method="post">
+    <input type="hidden" name="id" value="<{$data.id}>"/>
+    姓名：<input type="text" name='username' value="<{$data.username}>"/></br>
+    邮箱：<input type="text" name='email' value="<{$data.email}>"/></br>
+    是否是VIP:否<input type='radio' name='vip' value='0'> 是<input type="radio" name="vip" value="1"/></br>
+    <input type="submit" value="提交修改"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输出变量</title>
+</head>
+<body>
+<{$data}><br>
+<{$arr[0]|md5}><br>
+<{$obj->name}><br>
+<{$Think.get.name}><br>
+<{$Think.version}><br>
+
+<if condition='$con eq "123"'>
+ 编程
+    <else/>
+    哈哈
+</if>
+
+<if condition='$con eq "124"'>
+    男人是泥巴做的
+    <elseif condition='$con eq "123"' />
+    只有编程才能快乐
+    <else/>
+    成年
+</if>
+
+<table border="1" width="500">
+    <for start="10" end="00" name="j" step="-2" comparison="gt">
+        <tr><td><{$j}>hh</td></tr>
+
+    </for>
+
+</table>
+
+<for start="0" end="3" name="j">
+    <{$a[$j]}><br>
+</for>
+
+<foreach name="a" key="k" item="v">
+<{$k}>---<{$v}><br>
+</foreach>
+
+</body>
+</html>
